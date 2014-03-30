@@ -25,7 +25,7 @@ import java.util.Vector;
  */
 public class ActionPanel extends JFrame implements NativeKeyListener, NativeMouseInputListener
 {
-    // Panel
+    // Panel i wanna test
     private JPanel rootPanel;
     private JPanel coordsPanel;
     private JPanel eventPanel;

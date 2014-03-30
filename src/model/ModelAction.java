@@ -119,4 +119,37 @@ public class ModelAction
     {
         return iDevice == RMG_KeyEvent.DEVICE_MOUSE;
     }
+
+    /**
+     * Get the text value of this action
+     * @return
+     */
+    public String getText()
+    {
+        String sName = getName();
+
+        sName += " (" + getMoreData() + ")";
+
+        return sName;
+    }
+
+    /**
+     * Give more data information
+     * @return
+     */
+    private String getMoreData()
+    {
+        String sMoreData;
+        if(getDevice() == RMG_KeyEvent.DEVICE_MOUSE){
+            sMoreData = RMG_KeyEvent.getModifiersText(getIdEvent());
+        }else{
+            sMoreData = RMG_KeyEvent.getKeyText(getIdEvent());
+        }
+        String sPosition = getPosition().getText();
+        if(sPosition.length() > 0){
+            sMoreData += " => " + sPosition;
+        }
+
+        return sMoreData;
+    }
 }

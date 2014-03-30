@@ -89,7 +89,8 @@ public class MainPanel extends JFrame implements NativeKeyListener, NativeMouseI
         initButtonsAndHotkeys();
 
         // Uniformisation de la présentation et lancement de l'affichage
-        pack();
+        setLocationRelativeTo(null);
+        setSize(1200, 800);
         setVisible(true);
     }
 
@@ -245,7 +246,7 @@ public class MainPanel extends JFrame implements NativeKeyListener, NativeMouseI
         switch(nativeKeyEvent.getKeyCode()){
             case RMG_KeyEvent.EVENT_F6:
                 ModelPosition oCurrentPos = ModelMouse.getMousePosition();
-                HelperLog.getLog().logInfo("Récupération de la position => " + oCurrentPos.getPosX() + ":" + oCurrentPos.getPoxY());
+                HelperLog.getLog().logInfo("Récupération de la position => " + oCurrentPos.getPosX() + ":" + oCurrentPos.getPosY());
                 break;
             case RMG_KeyEvent.EVENT_F7:
                 if(isStartAction(btnActionTactic)){

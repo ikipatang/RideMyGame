@@ -38,8 +38,23 @@ public class ModelPosition
     /**
      * @return the poxY
      */
-    public int getPoxY()
+    public int getPosY()
     {
         return iPosY;
+    }
+
+    /**
+     * @return
+     */
+    public String getText()
+    {
+        String sPosition = "";
+
+        // Si on a une position de définit
+        if(getPosX() > 0 || getPosY() > 0){
+            sPosition = getPosX() + ":" + getPosY();
+        }
+
+        return sPosition;
     }
 }

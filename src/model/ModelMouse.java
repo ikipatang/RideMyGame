@@ -26,7 +26,7 @@ public class ModelMouse
         }
 
         // Move mouse.
-        robot.mouseMove(oPosition.getPosX(), oPosition.getPoxY());
+        robot.mouseMove(oPosition.getPosX(), oPosition.getPosY());
 
         // Left click and release.
         if(input > 0){
@@ -42,7 +42,6 @@ public class ModelMouse
      */
     public static ModelPosition getMousePosition()
     {
-        ModelPosition oPosition = new ModelPosition(MouseInfo.getPointerInfo().getLocation().x, MouseInfo.getPointerInfo().getLocation().y);
-        return oPosition;
+        return new ModelPosition(MouseInfo.getPointerInfo().getLocation().x, MouseInfo.getPointerInfo().getLocation().y);
     }
 }

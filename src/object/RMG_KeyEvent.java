@@ -63,21 +63,39 @@ public class RMG_KeyEvent
             vKeyList.add(basemodel);
 
             basemodel = new RMG_BaseModel();
-            basemodel.set("id", EVENT_LEFTCLICK);
+            basemodel.set("id", EVENT_MIDDLECLICK);
             basemodel.set("label", "Middle click");
             vKeyList.add(basemodel);
 
             basemodel = new RMG_BaseModel();
-            basemodel.set("id", EVENT_LEFTCLICK);
+            basemodel.set("id", EVENT_RIGHTCLICK);
             basemodel.set("label", "Right click");
             vKeyList.add(basemodel);
         }else{
             basemodel = new RMG_BaseModel();
-            basemodel.set("id", EVENT_LEFTCLICK);
+            basemodel.set("id", EVENT_BACKSPACE);
             basemodel.set("label", "Backspace");
             vKeyList.add(basemodel);
         }
 
         return vKeyList;
+    }
+
+    /**
+     * @param iEventId
+     * @return
+     */
+    public static String getModifiersText(int iEventId)
+    {
+        return NativeKeyEvent.getModifiersText(iEventId);
+    }
+
+    /**
+     * @param iEventId
+     * @return
+     */
+    public static String getKeyText(int iEventId)
+    {
+        return NativeKeyEvent.getKeyText(iEventId);
     }
 }

@@ -350,7 +350,7 @@
 //    {
 //        if(iIdentifier == F6){
 //            ModelPosition oCurrentPos = ModelMouse.getMousePosition();
-//            HelperLog.getLog().logInfo("Récupération de la position => " + oCurrentPos.getPosX() + ":" + oCurrentPos.getPoxY());
+//            HelperLog.getLog().logInfo("Récupération de la position => " + oCurrentPos.getPosX() + ":" + oCurrentPos.getPosY());
 //        }
 //        if(iIdentifier == F7){
 //            if(isStartAction(btnAction)){

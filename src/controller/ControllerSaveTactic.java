@@ -117,7 +117,7 @@ public class ControllerSaveTactic
         Element nPosX = new Element("x").setText(HelperTools.intToString(oPosition.getPosX()));
         nPosition.addContent(nPosX);
 
-        Element nPosY = new Element("y").setText(HelperTools.intToString(oPosition.getPoxY()));
+        Element nPosY = new Element("y").setText(HelperTools.intToString(oPosition.getPosY()));
         nPosition.addContent(nPosY);
 
         return nPosition;
@@ -141,7 +141,7 @@ public class ControllerSaveTactic
             // On utilise ici un affichage classique avec getPrettyFormat()
             XMLOutputter sortie = new XMLOutputter(Format.getPrettyFormat());
             sortie.output(document, new FileOutputStream(saveFile));
-        }catch(java.io.IOException e){
+        }catch(java.io.IOException ignored){
         }
 
         return isSuccess;

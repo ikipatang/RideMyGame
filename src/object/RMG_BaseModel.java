@@ -12,7 +12,8 @@ public class RMG_BaseModel extends HashMap<Object, Object>
     private static String typeToken = "%"; // Non final pour que la classe soit sérialisable
 
     public static ListCellRenderer<RMG_BaseModel> getListCellRenderer(){
-        ListCellRenderer<RMG_BaseModel> renderer = new ListCellRenderer<RMG_BaseModel>()
+        ListCellRenderer<RMG_BaseModel> renderer;
+        renderer = new ListCellRenderer<RMG_BaseModel>()
         {
             public JLabel getListCellRendererComponent(JList<? extends RMG_BaseModel> list, RMG_BaseModel value, int index, boolean isSelected,
                                                        boolean cellHasFocus)
@@ -92,7 +93,7 @@ public class RMG_BaseModel extends HashMap<Object, Object>
      */
     public String set(String property, String value, int type)
     {
-        String oldValue = "";
+        String oldValue;
 
         // Définit une valeur par défaut à 0 pour le type numérique
         if((typeIsNum(type)) && (value == null)){

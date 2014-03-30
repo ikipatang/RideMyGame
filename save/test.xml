@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tactic name="defense">
+	<instruction order="0">
+		<sleep_time>200</sleep_time>
+		<action name="droit_devant">
+			<device>1</device>
+			<id_event>4</id_event>
+			<position>
+				<x>1157</x>
+				<y>416</y>
+			</position>
+		</action>
+	</instruction>
+	<instruction order="1">
+		<sleep_time>4000</sleep_time>
+		<action name="boost">
+			<device>1</device>
+			<id_event>16</id_event>
+			<position>
+				<x>1633</x>
+				<y>1000</y>
+			</position>
+		</action>
+	</instruction>
+	<instruction order="2">
+		<sleep_time>9000</sleep_time>
+		<action name="slide">
+			<device>1</device>
+			<id_event>16</id_event>
+			<position>
+				<x>1673</x>
+				<y>1023</y>
+			</position>
+		</action>
+	</instruction>
+</tactic>

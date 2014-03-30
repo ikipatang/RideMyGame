@@ -72,7 +72,8 @@ public class ActionPanel extends JFrame implements NativeKeyListener, NativeMous
         initComponents();
 
         // Uniformisation de la présentation et lancement de l'affichage
-        pack();
+        setSize(1200, 600);
+        setLocationRelativeTo(null);
         setVisible(true);
     }
 
@@ -93,8 +94,6 @@ public class ActionPanel extends JFrame implements NativeKeyListener, NativeMous
 
         return cbToFill;
     }
-
-
 
     /**
      * Initialise les boutons
@@ -149,8 +148,8 @@ public class ActionPanel extends JFrame implements NativeKeyListener, NativeMous
                     // TODO enregistrement des actions
                     HelperLog.getLog().logInfo("Save");
                 }else if(btnPressed == btnCancel){
-                    System.exit(0); // TODO supprimer après avoir fini le dev
                     dispose();
+                    System.exit(0); // TODO supprimer après avoir fini le dev
                 }else if(btnPressed == btnAdd){
                     // TODO appeler fonction add action
                     HelperLog.getLog().logInfo("Add");
